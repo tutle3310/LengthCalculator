@@ -16,5 +16,17 @@ namespace LengthCalculator
         {
             InitializeComponent();
         }
+
+        private void txtCM_KeyUp(object sender, KeyEventArgs e)
+        {
+            double douCM = Convert.ToDouble(txtCM.Text);
+
+            txtM.Text = string.Format("{0:0.##########}", douCM / 100);
+        }
+
+        private void btnAllClear_Click(object sender, EventArgs e)
+        {
+ 
+        }
     }
 }

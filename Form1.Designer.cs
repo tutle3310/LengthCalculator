@@ -61,6 +61,7 @@
             this.txtCM.Name = "txtCM";
             this.txtCM.Size = new System.Drawing.Size(100, 25);
             this.txtCM.TabIndex = 1;
+            this.txtCM.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCM_KeyUp);
             // 
             // txtM
             // 
@@ -173,6 +174,7 @@
             this.btnAllClear.TabIndex = 18;
             this.btnAllClear.Text = "清除";
             this.btnAllClear.UseVisualStyleBackColor = true;
+            this.btnAllClear.Click += new System.EventHandler(this.btnAllClear_Click);
             // 
             // Form1
             // 
