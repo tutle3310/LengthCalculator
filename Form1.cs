@@ -90,7 +90,13 @@ namespace LengthCalculator
 
         private void btnAllClear_Click(object sender, EventArgs e)
         {
- 
+            txtCM.Text = "" ;
+            txtM.Text = "" ;
+            txtKM.Text = "" ;
+            txtin.Text = "" ;
+            txtFit.Text = "" ;
+            txtYard.Text = "" ;
+
         }
     }
 }
