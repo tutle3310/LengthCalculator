@@ -39,62 +39,98 @@ namespace LengthCalculator
 
         private void txtM_KeyUp(object sender, EventArgs e)
         {
-            double douM = Convert.ToDouble(txtM.Text);
-            
+            strInput = txtM.Text;
+            if (double.TryParse(strInput, out douOutput) == true)
+            {
 
-            txtCM.Text = string.Format("{0:0.##########}", douM * 100);
-            txtKM.Text = string.Format("{0:0.##########}", douM * 0.001);
-            txtin.Text = string.Format("{0:0.##########}", douM * 39.37);
-            txtFit.Text = string.Format("{0:0.##########}", douM * 3.28);
-            txtYard.Text = string.Format("{0:0.##########}", douM * 1.09);
-        }
+                txtCM.Text = string.Format("{0:0.##########}", douOutput * 100);
+                txtKM.Text = string.Format("{0:0.##########}", douOutput * 0.001);
+                txtin.Text = string.Format("{0:0.##########}", douOutput * 39.37);
+                txtFit.Text = string.Format("{0:0.##########}", douOutput * 3.28);
+                txtYard.Text = string.Format("{0:0.##########}", douOutput  * 1.09);
+            }
+            else
+            {
+                txtInfo.Text = "請輸入數字";
+                txtM.Text = "";
+            }
+            }
 
         private void txtKM_KeyUp(object sender, EventArgs e)
         {
-            double douKM = Convert.ToDouble(txtKM.Text);
-            
+            strInput = txtKM.Text;
+            if (double.TryParse(strInput, out douOutput) == true)
+            {
 
-            txtCM.Text = string.Format("{0:0.##########}", douKM * 100);
-            txtM.Text = string.Format("{0:0.##########}", douKM * 1000);
-            txtin.Text = string.Format("{0:0.##########}", douKM * 39370.1);
-            txtFit.Text = string.Format("{0:0.##########}", douKM * 3280.84);
-            txtYard.Text = string.Format("{0:0.##########}", douKM * 1093.61);
+
+                txtCM.Text = string.Format("{0:0.##########}", douOutput * 100);
+            txtM.Text = string.Format("{0:0.##########}", douOutput * 1000);
+            txtin.Text = string.Format("{0:0.##########}", douOutput * 39370.1);
+            txtFit.Text = string.Format("{0:0.##########}", douOutput * 3280.84);
+            txtYard.Text = string.Format("{0:0.##########}", douOutput * 1093.61);
+            }
+            else
+            {
+                txtInfo.Text = "請輸入數字";
+                txtKM.Text = "";
+            }
         }
 
         private void txtin_KeyUp(object sender, EventArgs e)
         {
-            
-            double douIn = Convert.ToDouble(txtin.Text);
+            strInput = txtin.Text;
+            if (double.TryParse(strInput, out douOutput) == true)
+            {
 
-            txtCM.Text = string.Format("{0:0.##########}", douIn * 2.54);
-            txtM.Text = string.Format("{0:0.##########}", douIn * 0.0254);
-            txtKM.Text = string.Format("{0:0.##########}", douIn * 0.0000254);
-            txtFit.Text = string.Format("{0:0.##########}", douIn * 0.0833);
-            txtYard.Text = string.Format("{0:0.##########}", douIn * 0.0278);
+                txtCM.Text = string.Format("{0:0.##########}", douOutput * 2.54);
+            txtM.Text = string.Format("{0:0.##########}", douOutput * 0.0254);
+            txtKM.Text = string.Format("{0:0.##########}", douOutput * 0.0000254);
+            txtFit.Text = string.Format("{0:0.##########}", douOutput * 0.0833);
+            txtYard.Text = string.Format("{0:0.##########}", douOutput * 0.0278);
+            }
+            else
+            {
+                txtInfo.Text = "請輸入數字";
+                txtin.Text = "";
+            }
         }
 
         private void txtFit_KeyUp(object sender, EventArgs e)
         {
-            
-            double douFt = Convert.ToDouble(txtFit.Text);
+            strInput = txtFit.Text;
+            if (double.TryParse(strInput, out douOutput) == true)
+            {
 
-            txtCM.Text = string.Format("{0:0.##########}", douFt * 30.48);
-            txtM.Text = string.Format("{0:0.##########}", douFt * 0.3048);
-            txtKM.Text = string.Format("{0:0.##########}", douFt * 0.0003048);
-            txtin.Text = string.Format("{0:0.##########}", douFt * 12);
-            txtYard.Text = string.Format("{0:0.##########}", douFt * 0.3333);
+                txtCM.Text = string.Format("{0:0.##########}", douOutput * 30.48);
+            txtM.Text = string.Format("{0:0.##########}", douOutput * 0.3048);
+            txtKM.Text = string.Format("{0:0.##########}", douOutput * 0.0003048);
+            txtin.Text = string.Format("{0:0.##########}", douOutput * 12);
+            txtYard.Text = string.Format("{0:0.##########}", douOutput * 0.3333);
+            }
+            else
+            {
+                txtInfo.Text = "請輸入數字";
+                txtFit.Text = "";
+            }
         }
 
         private void txtYard_KeyUp(object sender, EventArgs e)
         {
-            double douYard;
-            douYard = Convert.ToDouble(txtYard.Text);
+            strInput = txtYard.Text;
+            if (double.TryParse(strInput, out douOutput) == true)
+            {
 
-            txtCM.Text = string.Format("{0:0.##########}", douYard * 91.44);
-            txtM.Text = string.Format("{0:0.##########}", douYard * 0.9144);
-            txtKM.Text = string.Format("{0:0.##########}", douYard * 0.0009144);
-            txtin.Text = string.Format("{0:0.##########}", douYard * 36);
-            txtFit.Text = string.Format("{0:0.##########}", douYard * 3);
+                txtCM.Text = string.Format("{0:0.##########}", douOutput * 91.44);
+            txtM.Text = string.Format("{0:0.##########}", douOutput * 0.9144);
+            txtKM.Text = string.Format("{0:0.##########}", douOutput * 0.0009144);
+            txtin.Text = string.Format("{0:0.##########}", douOutput * 36);
+            txtFit.Text = string.Format("{0:0.##########}", douOutput * 3);
+            }
+            else
+            {
+                txtInfo.Text = "請輸入數字";
+                txtYard.Text = "";
+            }
         }
 
         private void btnAllClear_Click(object sender, EventArgs e)
